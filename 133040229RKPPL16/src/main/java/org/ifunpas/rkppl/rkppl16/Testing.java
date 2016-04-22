@@ -14,6 +14,8 @@ public class Testing {
     boolean result;
     Main m = new Main();
     
+    
+    
     @Test
     public void Test1(){
         m.setA(5);
@@ -25,7 +27,7 @@ public class Testing {
             result = false;
         }
         Assert.assertTrue("harusnya benar", result);
-        System.out.println("Test 1 : "+result);
+        System.out.println("Hasil Test 1 : "+result);
     }
     
     @Test
@@ -39,7 +41,7 @@ public class Testing {
             result = false;
         }
         Assert.assertFalse("harusnya salah", result);
-        System.out.println("Test 2 : "+result);
+        System.out.println("Hasil Test 2 : "+result);
     }
     
     @Ignore
@@ -53,7 +55,7 @@ public class Testing {
             result = false;
         }
         Assert.assertNotNull("harusnya tidak kosong", result);
-        System.out.println("Test 3 : "+result);
+        System.out.println("Hasil Test 3 : "+result);
     }
     
     public static void main(String[] args) {
@@ -62,5 +64,6 @@ public class Testing {
         t.Test1();
         t.Test2();
         t.Test3();
+        
     }
 }
