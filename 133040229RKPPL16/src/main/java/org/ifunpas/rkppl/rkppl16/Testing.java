@@ -14,7 +14,10 @@ public class Testing {
     boolean result;
     Main m = new Main();
     
-    
+    @Before
+    public void Start(){
+        System.out.println("Test dimulai");
+    }
     
     @Test
     public void Test1(){
@@ -44,7 +47,7 @@ public class Testing {
         System.out.println("Hasil Test 2 : "+result);
     }
     
-    @Ignore
+    @Test
     public void Test3(){
         m.setA(11);
         m.setB(7);
@@ -58,12 +61,19 @@ public class Testing {
         System.out.println("Hasil Test 3 : "+result);
     }
     
+    @After
+    public void End(){
+        System.out.println("Test Berakhir");
+    }
+    
     public static void main(String[] args) {
         Testing t = new Testing();
         System.out.println("Hasil Test : ");
+        t.Start();
         t.Test1();
         t.Test2();
         t.Test3();
+        t.End();
         
     }
 }
